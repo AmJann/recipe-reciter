@@ -13,8 +13,9 @@ description: String,
 ingredients:[String],
 instructions: String,
 totalTime: String
+
     },
-    {timestamp: true}
+    {timestamps: true}
 )
 const Recipe = mongoose.model("Recipe", RecipeSchema)
 module.exports = Recipe
