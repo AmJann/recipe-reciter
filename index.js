@@ -1,15 +1,16 @@
 require('dotenv').config()
-const express = require("express")
+const express = require('express')
+const RecipeControllers = require('./controllers/recipe')
 const methodOverride = require('method-override')
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(methodOverride('_method'))
+app.use('/recipe', RecipeControllers)
 
-app.get('/',(req,res)=>{
-    res.send("hello world")
-})
+
+
 
 const port = process.env.PORT || 4002
 

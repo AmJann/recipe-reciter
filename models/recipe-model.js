@@ -1,3 +1,4 @@
+require('../db/connections');
 const mongoose = require("mongoose")
 
 const RecipeSchema = new mongoose.Schema(

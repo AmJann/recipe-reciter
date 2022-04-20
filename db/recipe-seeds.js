@@ -1,9 +1,18 @@
+// require('dotenv').config()
 const Recipe = require('../models/recipe-model');
+
 
 const seedData = require('./recipe-seeds.json')
 
 Recipe.deleteMany({})
-.then(() =>{
+  .then(() => {
+      console.log("inserting data")
     return Recipe.insertMany(seedData);
-})
- .finally(()=> process.exit());
+  })
+  
+//   .catch(function(error){
+//     console.log(error); // Failure
+// })
+  .finally(() => {
+    process.exit();
+  });
