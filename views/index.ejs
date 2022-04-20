@@ -1,0 +1,20 @@
+<h1>Recipe Reciter</h1>
+<div class ="buttonContainer">
+    <a class = "button font" href = "/new">New</a>
+</div>
+
+<div class ="container">
+
+    <% Recipe.forEach(v =>{ %>
+        <div class = "recipe">
+            <div class = "font"> <%= v.title %> </div>
+            <img src = <%=v.img %>>
+
+            <div>
+                <a class = "font" href="/">edit</a>
+                <a class = "font" href="/">delete</a>
+            </div>  
+        </div>
+ 
+   <% }) %>
+</div>

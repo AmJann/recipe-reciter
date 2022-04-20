@@ -8,6 +8,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(methodOverride('_method'))
 app.use('/recipe', RecipeControllers)
+app.set("view engine","ejs")
 
 
 
