@@ -2,7 +2,7 @@
   [  
       {
         
-"Title": "Grilled Cheese",
+"title": "Grilled Cheese",
 "img": "https://cdn.craftbeer.com/wp-content/uploads/grilledcheese1-900x600.jpg",
 "description": "best grilled cheese ever",
 "ingredients":["bread", "cheese", "butter"],
