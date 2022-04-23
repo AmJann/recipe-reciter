@@ -8,8 +8,8 @@ app.use(express.json())
 app.use(express.static(__dirname + '/' + 'public'));
 app.use(express.urlencoded({extended:true}))
 app.use(methodOverride('_method'))
-app.use( RecipeControllers)
 app.set("view engine","ejs")
+app.use( RecipeControllers)
 
 
 

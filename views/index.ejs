@@ -11,8 +11,15 @@
             <img src = <%=v.img %>>
 
             <div>
-                <a class = "font" href="/<%=v.id%>/edit">edit</a>
-                <a class = "font" href="/">delete</a>
+                <a class = "font" href="/<%=v.id%>">View</a>
+                <a class = "font" href="/<%=v.id%>/edit">Edit</a>
+                <form class='removeFormMargin' action="/<%=v.id%>?_method=DELETE" method="POST">
+                    <input 
+                        class="button cancel font"
+                        type="submit"
+                        value="Delete"
+                    />
+                </form>
             </div>  
         </div>
  

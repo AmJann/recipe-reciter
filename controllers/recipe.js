@@ -12,6 +12,8 @@ router.get('/',(req,res)=>{
         res.render('index',{Recipe:data,id:id})
     })
 });
+
+
 router.get('/new', (req, res) => {
     res.render('new');
   });
@@ -23,7 +25,13 @@ router.post('/new', (req,res)=>{
         )
 }); 
 
-
+router.get('/:id',(req,res) =>{
+    const id = req.params.id
+    Recipe.findById(id)
+    .then((data)=>{
+        res.render('view',{Recipe:data, id:id})
+    })
+});
   router.get('/:id/edit',(req,res) => {
       const id = req.params.id
     Recipe.findById(id)
@@ -35,22 +43,28 @@ router.post('/new', (req,res)=>{
 
   router.put('/:id',(req,res) =>{
     const id = req.params.id
-      findByIdAndUpdate({
-        title:{
-            type:String,
-            required: true 
-        },
-        img: String,
-        url: String,
-        description: String,
-        ingredients:[String],
-        instructions: String,
-        totalTime: String
+      Recipe.findByIdAndUpdate((id),{
+        title:req.body.title,
+        img: req.body.img,
+        url: req.body.url,
+        description: req.body.description,
+        ingredients:req.body.ingredients,
+        instructions: req.body.instructiond,
+        totalTime: req.body.totalTime
       })
       .then((data) => {
           res.redirect('/')
       })
+      .catch(console.error)
   })
+
+  router.delete('/:id', (req,res)=>{
+    Recipe.findByIdAndDelete(req.params.id)
+    .then(()=>{
+        res.redirect('/')
+    })
+    .catch(console.error)
+})
   
 
 
