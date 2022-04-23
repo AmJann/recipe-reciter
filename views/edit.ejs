@@ -1,0 +1,22 @@
+<h1>Edit Recipe</h1>
+
+<form class = "form" action ="/<%=id%>/edit?_method=PUT" method = "POST">
+     
+    <div class ="inputParent">
+        <label class = "font" for = "title">Recipe Name</label>
+        <input claass = "input" type = "text" name = "title">
+        <label class = "font" for = "img">Image</label>
+        <input class = "input" type = "text" name = "img">
+        <label class = "font" for = "description">Insert Recipe Description</label>
+        <input class = "input" type = "text" name = "description">
+        <label class = "font" for = "ingredients">List Ingredients</label>
+        <input class = "input" type = "text" name = "ingredients">
+        <label class = "font" for = "instructions">Detail Instructions</label>
+        <input claass = "input" type = "text" name = "instructions">
+        <label class = "font" for = "totalTime">Insert Cooking Times</label>
+        <input claass = "input" type = "text" name = "totalTime">
+        
+    </div>
+    <input class = " button font submit" type ="submit"/>
+    <a class = " button font cancel" href="/">Cancel</a>
+</form>
