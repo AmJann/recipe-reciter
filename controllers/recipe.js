@@ -19,11 +19,13 @@ router.get('/new', (req, res) => {
   });
 
 router.post('/new', (req,res)=>{
+    
+   req.body.ingredients = req.body.ingredients.split(",")
     Recipe.create(req.body)
     .then(
         ()=>res.redirect('/')
         )
-}); 
+});
 
 router.get('/:id',(req,res) =>{
     const id = req.params.id
@@ -43,13 +45,16 @@ router.get('/:id',(req,res) =>{
 
   router.put('/:id',(req,res) =>{
     const id = req.params.id
+     const ingredients = req.body.ingredients.split(",")
+     console.log(ingredients)
+
       Recipe.findByIdAndUpdate((id),{
         title:req.body.title,
         img: req.body.img,
         url: req.body.url,
         description: req.body.description,
-        ingredients:req.body.ingredients,
-        instructions: req.body.instructiond,
+        ingredients:ingredients,
+        instructions: req.body.instructions,
         totalTime: req.body.totalTime
       })
       .then((data) => {

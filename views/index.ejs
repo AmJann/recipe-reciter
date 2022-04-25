@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="style.css" />
 <h1>Recipe Reciter</h1>
 <div class ="buttonContainer">
     <a class = "button font" href = "/new">New</a>
@@ -11,8 +12,8 @@
             <img src = <%=v.img %>>
 
             <div>
-                <a class = "font" href="/<%=v.id%>">View</a>
-                <a class = "font" href="/<%=v.id%>/edit">Edit</a>
+                <a class = "button font" href="/<%=v.id%>">View</a>
+                <a class = "button font" href="/<%=v.id%>/edit">Edit</a>
                 <form class='removeFormMargin' action="/<%=v.id%>?_method=DELETE" method="POST">
                     <input 
                         class="button cancel font"

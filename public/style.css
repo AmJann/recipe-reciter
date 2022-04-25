@@ -1,0 +1,18 @@
+.button{
+    text-decoration: none;
+    height: 25px;
+    border: 1px solid black ;
+    display:inline-flex;
+    background-color: coral;
+    padding:3px 10px;
+}
+body{
+    background-color: bisque;
+    margin:auto 0;
+    padding:50px;
+
+    
+}
+h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
