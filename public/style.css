@@ -2,17 +2,63 @@
     text-decoration: none;
     height: 25px;
     border: 1px solid black ;
+    border-radius: 3px;
     display:inline-flex;
     background-color: coral;
     padding:3px 10px;
+    display: inline-flex;
+   align-self: ;
 }
 body{
     background-color: bisque;
     margin:auto 0;
     padding:50px;
+    border-left: 3px solid black;
+    margin-left:20%;
+    margin-right: 20%;
 
     
 }
 h1{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   text-align: center;
+}
+.container{
+    border-bottom: 1px solid black;
+    display:inline-flex;
+    flex-direction:row;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+
+.recipe{
+    border-bottom: 1px solid black;
+
+}
+
+.title{
+    font-size: larger;
+    text-align: center;
+}
+
+
+
+.img-container{
+    border:1px solid black;
+    border-radius:10px;
+    overflow: hidden;
+}
+
+.img{
+    
+}
+
+.font{
+    color:black;
+}
+
+.buttonContainer{
+    margin:0;
+    position:relative;
 }

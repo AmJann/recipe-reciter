@@ -1,19 +1,19 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <h1>Recipe Reciter</h1>
 <div class ="buttonContainer">
-    <a class = "button font" href = "/new">New</a>
+    <a class = "button font" id = "new" href = "/new">New</a>
 </div>
 
 <div class ="container">
 
     <% Recipe.forEach((v) =>{ %>
         <div class = "recipe">
-            <div class = "font"> <%=v.title %> </div>
-            <img src = <%=v.img %>>
+            <div class = "font title"> <%=v.title %> </div>
+           <div class = "img-container"> <img class = "img" src = <%=v.img %>></div>
 
             <div>
-                <a class = "button font" href="/<%=v.id%>">View</a>
-                <a class = "button font" href="/<%=v.id%>/edit">Edit</a>
+                <a class = "button font" id = "view" href="/<%=v.id%>">View</a>
+                <a class = "button font" id = "edit" href="/<%=v.id%>/edit">Edit</a>
                 <form class='removeFormMargin' action="/<%=v.id%>?_method=DELETE" method="POST">
                     <input 
                         class="button cancel font"
