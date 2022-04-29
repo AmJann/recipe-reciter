@@ -13,6 +13,8 @@ url: String,
 description: String,
 ingredients:[String],
 instructions: String,
+cookTime: String,
+prepTime: String,
 totalTime: String
 
     },

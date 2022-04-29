@@ -39,6 +39,7 @@ router.get('/:id',(req,res) =>{
     Recipe.findById(id)
     .then((data) => {
         res.render('edit',{Recipe:data, id:id})
+       
     })
     .catch(console.error)
   })

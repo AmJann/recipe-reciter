@@ -1,10 +1,11 @@
+
 <h1>Edit Recipe</h1>
 
 <form class = "form" action ="/<%=id%>/?_method=put" method = "POST">
      
     <div class ="inputParent">
         <label class = "font" for = "title">Recipe Name</label>
-        <input claass = "input" type = "text" name = "title">
+        <input class = "input" type = "text" name = "title">
         <label class = "font" for = "img">Image</label>
         <input class = "input" type = "text" name = "img">
         <label class = "font" for = "description">Insert Recipe Description</label>
@@ -12,9 +13,13 @@
         <label class = "font" for = "ingredients">List Ingredients</label>
         <input class = "input" type = "text" name = "ingredients">
         <label class = "font" for = "instructions">Detail Instructions</label>
-        <input claass = "input" type = "text" name = "instructions">
-        <label class = "font" for = "totalTime">Insert Cooking Times</label>
-        <input claass = "input" type = "text" name = "totalTime">
+        <input class = "input" type = "text" name = "instructions">
+        <label class = "font" for = "prepTime">Insert Prep Time</label>
+        <input class = "input" type = "text" name = "prepTime">
+        <label class = "font" for = "cookTime">Insert Cooking Time</label>
+        <input class = "input" type = "text" name = "cookTime">
+        <label class = "font" for = "totalTime">Insert Total Time</label>
+        <input class = "input" type = "text" name = "totalTime">
         
     </div>
     <input class = " button font submit" type ="submit"/>

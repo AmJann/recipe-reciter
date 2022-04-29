@@ -7,6 +7,8 @@
 "description": "best grilled cheese ever",
 "ingredients":["bread", "cheese", "butter"],
 "instructions": "melt butter in pan add bread with cheese in the middle, toast on both sides till desired toastiness",
+"prepTime":"3 minutes",
+"cooktime": "7 minutes",
 "totalTime": "10 minutes"
 
     }

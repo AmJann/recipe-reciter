@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
-<h1>Recipe Reciter</h1>
+
 <div class ="buttonContainer">
+    <h1>Recipe Reciter</h1>
     <a class = "button font" id = "new" href = "/new">New</a>
 </div>
 
@@ -11,7 +12,7 @@
             <div class = "font title"> <%=v.title %> </div>
            <div class = "img-container"> <img class = "img" src = <%=v.img %>></div>
 
-            <div>
+            <div class="buttonContainer2">
                 <a class = "button font" id = "view" href="/<%=v.id%>">View</a>
                 <a class = "button font" id = "edit" href="/<%=v.id%>/edit">Edit</a>
                 <form class='removeFormMargin' action="/<%=v.id%>?_method=DELETE" method="POST">
@@ -26,3 +27,5 @@
  
    <% }) %>
 </div>
+
+<footer><span>by Amber Jankowski</span></footer>
