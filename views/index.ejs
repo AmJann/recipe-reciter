@@ -1,13 +1,16 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 
 <div class ="buttonContainer">
-    <h1>Recipe Reciter</h1>
-    <a class = "button font" id = "new" href = "/new">New</a>
-       
+   <div class = "header"> <h1>Recipe Reciter</h1></div>
+   <p class="header case">(Case Sensitive)</p>
+    <div class="header">
     <form action="/search" method="post">
-        <input type="text" class="searchBar" placeholder="search by recipe name" name="title" value=''>
-        <input type="submit" value="send">
+        <input type="text" class="searchBar" placeholder="search by name" name="title" value=''>
+        <input type="submit" class = "button" value="send">
         </form>
+        
+    </div>
+    <a class = "button font header" id = "new" href = "/new">New</a>
 </div>
 
 <div class ="container">

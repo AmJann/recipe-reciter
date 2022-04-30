@@ -28,6 +28,7 @@ h1{
    text-align: center;
    color:rgb(69, 65, 65);
    font-family: 'Source Code Pro', monospace;
+   padding-bottom:0%;
    
    
 }
@@ -39,7 +40,7 @@ h1{
     flex-wrap: wrap;
     padding-left: 4%;
     padding-right: 4%;
-    
+    padding:5%;
 }
 
 
@@ -83,11 +84,10 @@ h1{
 }
 
 .buttonContainer{
-    display: inline-flex;
+    display:flex;
     justify-content: center;
-    float:center;
+    align-items: center;
     flex-direction: column;
-
     
 }
 
@@ -163,6 +163,7 @@ input[type="text"] {
     border-radius: 10px;
     background-color:rgb(144, 233, 204);
     box-shadow: 3px 3px rgb(95, 94, 94);
+    text-align: center;
 }
 .ingredients{
     width:fit-content;
@@ -191,4 +192,20 @@ input[type="text"] {
 
 .url{
     text-align: center;
+    padding: 2%;
+}
+
+.searchBar{
+    margin-bottom:5%;
+    width:20%;
+}
+
+.header{
+    display:flex;
+    align-self: center;
+    justify-content: center;
+}
+.case{
+    margin: 0;
+    color:rgb(82, 84, 86);
 }
