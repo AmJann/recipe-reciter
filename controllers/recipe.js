@@ -6,11 +6,13 @@ const Recipe = require('../models/recipe-model.js')
 
 router.get('/',(req,res)=>{
     const id = req.params.id
-    
-    // Recipe.aggregate([{$sort:{title:1}}])
-    Recipe.find({})
+  
+
+//   Recipe.aggregate([{$sort:{title:1}}])
+  Recipe.find({})
+    .sort("title")
     .then((data) => {
-        console.log(data)
+
         res.render('index',{Recipe:data,id:id})
     })
 });
@@ -78,9 +80,7 @@ router.get('/:id',(req,res) =>{
         }
         res.render('view', {Recipe:data});
     });
-    // .catch('error',(req,res)=>{res.render('error')}
-        
-    // )
+  
 });
 
 
