@@ -14,6 +14,7 @@ app.use(ejsLayouts);
 app.use(express.urlencoded({extended:true}))
 app.use(methodOverride('_method'))
 app.use(express.static(__dirname + '/' + 'public'));
+app.get('/favicon.ico', (req, res) => {res.send("dummy")})
 app.use( RecipeControllers)
 
 
