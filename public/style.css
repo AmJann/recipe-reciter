@@ -37,10 +37,12 @@ h1{
     flex-direction:row;
     justify-content:space-between;
     flex-wrap: wrap;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
     
 }
+
+
 
 
 .recipe{
@@ -129,10 +131,7 @@ input[type="text"] {
     font-family: 'Source Code Pro', monospace;
 }
 
-.buttonContainer3{
-    display:flex;
-    justify-content: center;
-}
+
 
 .submit{
     height:auto;
@@ -141,4 +140,55 @@ input[type="text"] {
 #new{
     height: 100%;
     width:20%;
+}
+
+.content{
+    border:1px solid rgb(236, 241, 227);
+    display:inline-flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:5%;
+    margin-bottom: 4%;;
+    padding-top:2%;
+    margin-top: 2%;
+}
+
+.value{
+ 
+    border: 2px solid rgb(77, 143, 149);
+    padding: 5%;
+    margin:4%;
+    padding-right: 6%;
+    border-radius: 10px;
+    background-color:rgb(144, 233, 204);
+    box-shadow: 3px 3px rgb(95, 94, 94);
+}
+.ingredients{
+    width:fit-content;
+    border: 2px solid rgb(77, 143, 149);
+    padding: 5%;
+    margin:4%;
+    align-content: center;
+    border-radius: 10px;
+    background-color:rgb(144, 233, 204);
+    box-shadow: 3px 3px rgb(95, 94, 94);
+    
+
+}
+
+.top{
+    border:1px solid rgb(236, 241, 227);
+    display:flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 2% 20% 2% 20%;
+    
+  
+}
+
+.url{
+    text-align: center;
 }

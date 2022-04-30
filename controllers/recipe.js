@@ -1,11 +1,13 @@
 const express = require('express');
-const { findByIdAndUpdate } = require('../models/recipe-model.js');
+// const { findByIdAndUpdate } = require('../models/recipe-model.js');
 const router = express.Router();
 
 const Recipe = require('../models/recipe-model.js')
 
 router.get('/',(req,res)=>{
     const id = req.params.id
+    
+    // Recipe.aggregate([{$sort:{title:1}}])
     Recipe.find({})
     .then((data) => {
         console.log(data)
@@ -34,6 +36,8 @@ router.get('/:id',(req,res) =>{
         res.render('view',{Recipe:data, id:id})
     })
 });
+
+
   router.get('/:id/edit',(req,res) => {
       const id = req.params.id
     Recipe.findById(id)
@@ -64,6 +68,22 @@ router.get('/:id',(req,res) =>{
       .catch(console.error)
   })
 
+  router.post('/search', function(req, res) {
+    const title = req.body.title;
+    Recipe.findOne({title: {$eq: title}}, function (err, data) {
+        console.log(req.body)
+        console.log(data)
+        if(data === null) {
+            return res.render('error');
+        }
+        res.render('view', {Recipe:data});
+    });
+    // .catch('error',(req,res)=>{res.render('error')}
+        
+    // )
+});
+
+
   router.delete('/:id', (req,res)=>{
     Recipe.findByIdAndDelete(req.params.id)
     .then(()=>{
@@ -72,7 +92,6 @@ router.get('/:id',(req,res) =>{
     .catch(console.error)
 })
   
-
 
 
 

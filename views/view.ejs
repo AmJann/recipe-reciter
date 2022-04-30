@@ -1,30 +1,54 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
+
 <h1><%=Recipe.title %></h1>
+<div class="top">
 <div class="img-container"><img class = "img"src="<%=Recipe.img %>"></div>
-<h2>Recipe link</h2>
-<h4><%=Recipe.url %></h4>
+<div class = "value url">
+    <h2>Recipe link</h2>
+    <h4><%=Recipe.url %></h4>
+    </div>
+<div class ="font ingredients">
+    <h2>Ingredients</h2>
+    
+    <div>
+    <% Recipe.ingredients.forEach((v) =>{ %>
+        <div>
+            <ul>
+            <li><%=v %></li>
+        </ul>
+        
+        </div>
+    
+    <% }) %>
+    </div>
+    </div>
+</div>
+<div class = "font content">
+
+<div class = "value">
 <h2>Recipe Description</h2>
 <p><%=Recipe.description %></p>
-<h2>Ingredients</h2>
-<div>
-<% Recipe.ingredients.forEach((v) =>{ %>
-    <div class = "ingredients">
-        <ul>
-        <li><%=v %></li>
-    </ul>
-    
-    </div>
-
-<% }) %>
 </div>
+
+<div class = "value">
 <h2>Instructions</h2>
-<h4><%=Recipe.instructions %></h4>
+<p><%=Recipe.instructions %></p>
+</div>
+<div class = "value">
 <h2>Prep Time</h2>
 <h4><%=Recipe.prepTime %></h4>
+</div>
+<div class = "value">
 <h2>Cook Time</h2>
 <h4><%=Recipe.cookTime %></h4>
+</div>
+<div class = "value">
 <h2>Total Time</h2>
 <h4><%=Recipe.totalTime %></h4>
+</div>
+</div>
 
-<a class = "font" href="/">Home</a>
+
+<a class = "font button" href="/">Home</a>
+
 
