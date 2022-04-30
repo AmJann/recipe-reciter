@@ -62,7 +62,7 @@ router.get('/:id',(req,res) =>{
         instructions: req.body.instructions,
         totalTime: req.body.totalTime
       })
-      .then((data) => {
+      .then(() => {
           res.redirect('/')
       })
       .catch(console.error)
